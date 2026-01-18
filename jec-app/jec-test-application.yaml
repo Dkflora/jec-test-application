@@ -22,7 +22,7 @@ spec:
       - name: nginx-proxy   # Sidecar container for reverse_proxy
         image: nginx:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8082
         
 ---
 apiVersion: v1
