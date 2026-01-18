@@ -19,3 +19,20 @@ spec:
         image: dkflora/my-portfolio:latest
         ports:
         - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: resume-service
+  labels:
+    app: resume
+spec:
+  type: LoadBalancer
+  selector:
+    app: resume
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+
