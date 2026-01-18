@@ -19,11 +19,9 @@ spec:
         image: dkflora/my-portfolio:latest
         ports:
         - containerPort: 80
-      - name: nginx-proxy   # Sidecar container for reverse_proxy
-        image: nginx:latest
-        ports:
-        - containerPort: 8080
-
+      - name: Sidecar   # Sidecar container for reverse_proxy
+        image: redis
+        
 ---
 apiVersion: v1
 kind: Service
